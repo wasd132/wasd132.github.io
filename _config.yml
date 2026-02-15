@@ -1,18 +1,18 @@
-title: Abhishek Nagekar
-description: Web & Security Engineer
-site_title: '@abhn - Abhishek Nagekar'
+title: YoungChanYoo
+description: Security Engineer
+site_title: '@TOSS_PORTFOLIO'
 
 # Build settings
 markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
-blog_url: https://www.nagekar.com
-email: abhishek@nagekar.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+github_username: wasd132
+blog_url: 
+email: wasd13579@gmail.com
+keybase_username: 
+twitter_username: 
+reddit_username: 
 
 # absolute or relative
 profile_picture: assets/images/pp.jpg
