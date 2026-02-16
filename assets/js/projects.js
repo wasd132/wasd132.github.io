@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    render_projects('ml');
+    render_projects('security');
 })
 
 
