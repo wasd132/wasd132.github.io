@@ -386,6 +386,13 @@ img {
   border: solid 2px white;
 }
 
+/* Ensure profile image fills the circular container without distortion */
+.profile-pic {
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
 .profile-pic:hover {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
