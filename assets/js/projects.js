@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    render_projects('webdev');
+    render_projects('ml');
 })
 
 
@@ -13,11 +13,11 @@ let render_projects = (slug) => {
         {
             image: 'assets/images/mentors.jpg',
             link: 'https://github.com/abhn/Mporter',
-            title: 'Mporter',
+            title: 'Blind project',
             demo: 'https://mporter.co',
-            technologies: ['Flask', 'Celery', 'Python'],
-            description: "Flask web application for easy reporting updates to one's mentor. Multi-user support, easy to deploy and use.",
-            categories: ['webdev']
+            technologies: ['Yolov5', 'Celery', 'Python'],
+            description: "시각장애인을 위한 보행 보조장치입니다. Yolov5를 사용하여 장애인의 주변 환경을 인식하고, 사용자에게 경고를 제공합니다.",
+            categories: ['ml']
         },
         {
             image: 'assets/images/mobile-landscape.jpg',
@@ -26,7 +26,7 @@ let render_projects = (slug) => {
             demo: 'http://wall-e-jekyll.github.io/',
             technologies: ['Semantic UI', 'Jekyll'],
             description: "A modern Jekyll theme with grid frontpage, beautiful typography, mobile responsive, made with Semantic UI.",
-            categories: ['webdev']
+            categories: ['ml']
         },
         {
             image: 'assets/images/mpw.jpg',
@@ -44,7 +44,7 @@ let render_projects = (slug) => {
             demo: false,
             technologies: ['python', 'flask'],
             description: "Web based status monitor/smart mirror, displays system stats, weather and more.",
-            categories: ['webdev']
+            categories: ['ml']
         },
         {
             image: 'assets/images/s3scan.png',
@@ -62,7 +62,7 @@ let render_projects = (slug) => {
             demo: 'https://elementary-jekyll.github.io/',
             technologies: ['Jekyll', 'CSS3'],
             description: "Elementary is a zero Javascript and minimal CSS ultra lightweight Jekyll theme for those of you who love simplicity.",
-            categories: ['webdev']
+            categories: ['ml']
         },
         {
             image: 'assets/images/nextcloud-enc.png',
