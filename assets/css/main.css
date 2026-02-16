@@ -386,7 +386,7 @@ img {
   border: solid 2px white;
 }
 
-/* Ensure profile image fills the circular container without distortion */
+/* 사진 해상도 처리 */
 .profile-pic {
   object-fit: cover;
   object-position: center center;
@@ -455,12 +455,12 @@ img {
   background-color: rgba(255,255,255,0.1);
 }
 
-/* Make awards subsection span full width of the about grid */
+/* 그리드 처리 */
 .awards-section {
   grid-column: 1 / -1;
 }
 
-/* Make award cards flow horizontally and share available space */
+/* 수상내역 가로로 처리 */
 .awards-list > .award-item {
   flex: 1 1 300px;
   max-width: 48%;
