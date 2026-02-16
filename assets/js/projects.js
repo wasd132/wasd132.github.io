@@ -23,7 +23,7 @@ let render_projects = (slug) => {
             image: 'assets/images/mobile-landscape.jpg',
             link: 'https://github.com/abhn/Wall-E',
             title: '태양광 기반 세종시 모기 퇴치 솔루션',
-            demo: 'http://wall-e-jekyll.github.io/',
+            demo: false,
             technologies: ['Yolov5', 'python','Raspberry PI'],
             description: "태양광과 Raspberry PI, Yolov5를 활용한 해충 방제 프로젝트입니다. 특정 위치에 말라리아등의 매개가 되는 모기가 다량 발생 시 이를 탐지하고 대시보드에 출력합니다.",
             categories: ['ml']
@@ -34,16 +34,16 @@ let render_projects = (slug) => {
             title: 'PE-A(Analyzer)',
             demo: 'https://github.com/ultisy/PE-A',
             technologies: ['Python', 'Qt Designer'],
-            description: "Master Password is an ingenious password solution that makes your passwords truly impossible to lose.",
+            description: "프로젝트 PEA는 'PE(Portable Executable)' 파일 포맷을 분석하고 기능별로 파편화된 도구들을 통합해서 초보자도 손쉽게 사용할 수 있도록 설계했습니다.",
             categories: ['security']
         },
         {
             image: 'assets/images/raspberry-pi-monitor.png',
             link: 'https://github.com/abhn/RPi-Status-Monitor',
-            title: 'Raspberry Pi Monitor',
+            title: '이커머스 데이터 기반 개인화 추천 시스템 설계 및 구현',
             demo: false,
-            technologies: ['python', 'flask'],
-            description: "Web based status monitor/smart mirror, displays system stats, weather and more.",
+            technologies: ['python', 'APriori', 'LTR'],
+            description: "Apriori 알고리즘과 LTR(Learning to Rank)을 활용한 상품 추천 시스템을 구축했습니다.",
             categories: ['ml']
         },
         {
