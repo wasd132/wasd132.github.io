@@ -572,8 +572,8 @@ a {
   border: 1px solid #e0e0e0;
   color: #e0e0e0;
   padding: 8px 16px;
-  min-width: auto;
-  max-width: none;
+  min-width: 110px;
+  max-width: 160px;
   text-transform: capitalize;
   transition: all 0.3s ease;
 }
