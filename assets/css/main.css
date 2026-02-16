@@ -559,14 +559,35 @@ a {
 }
 
 .project-technologies {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(120px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin: 20px 0;
-  grid-gap: 5px;
-  grid-row-gap: 10px;
   width: 100%;
+}
+
+.project-technologies .semi-transparent-button {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+  padding: 8px 16px;
+  min-width: auto;
+  max-width: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.project-technologies .semi-transparent-button:hover {
+  background: #e0e0e0;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
+}
+
+.project-technologies .white-button-hover {
+  background: #e0e0e0;
+  color: #1a1a1a;
+  border-color: #e0e0e0;
 }
 
 .project-technology {
