@@ -1,3 +1,18 @@
+/* Dark mode theme */
+:root {
+  --bg-dark: #1a1a1a;
+  --bg-darker: #0f0f0f;
+  --text-light: #e0e0e0;
+  --text-muted: #a8a8a8;
+  --accent: #3498db;
+  --border-light: #333;
+}
+
+html, body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
 body {
   min-width: 360px;
   font-family: 'PT Sans', sans-serif;
@@ -7,6 +22,14 @@ body {
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+a {
+  color: #64b5f6;
+}
+
+a:hover {
+  color: #90caf9;
 }
 
 .head {
@@ -196,7 +219,7 @@ img {
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   font-size: 40px;
   font-size: 2.5rem;
-  color: #222;
+  color: #e0e0e0;
   font-weight: bold;
 }
 
@@ -227,12 +250,12 @@ img {
   font-size: 20.8px;
   font-size: 1.3rem;
   margin: 30px auto;
-  color: #404040;
+  color: #d0d0d0;
 }
 
 .paragraph-text-normal {
   font-family: 'PT Sans', sans-serif;
-  color: #404040;
+  color: #d0d0d0;
 }
 
 .pt-sans-font {
@@ -301,7 +324,7 @@ img {
   padding: 10px;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
-  color: #222;
+  color: #e0e0e0;
 }
 
 .project-title {
@@ -334,7 +357,7 @@ img {
 }
 
 .project-tag-item {
-  background-color: #444;
+  background-color: #3498db;
   border-radius: 3px;
   padding: 5px;
   color: #fff;
@@ -353,7 +376,7 @@ img {
 .blog-title {
   font-size: 17.6px;
   font-size: 1.1rem;
-  color: inherit;
+  color: #90caf9;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
@@ -417,7 +440,7 @@ img {
 .about-subsection-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #222;
+  color: #e0e0e0;
   margin-bottom: 20px;
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
@@ -436,7 +459,7 @@ img {
 
 .experience-company {
   font-size: 0.95rem;
-  color: #888;
+  color: #a8a8a8;
   margin: 5px 0;
 }
 
@@ -676,10 +699,10 @@ a {
 .award-item {
   margin: 0;
   padding: 10px;
-  background-color: #f5f5f5;
+  background-color: #2a2a2a;
   border-radius: 6px;
   min-width: 180px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .section-wrapper:nth-child(odd) .award-item {
   background-color: rgba(255,255,255,0.1);
