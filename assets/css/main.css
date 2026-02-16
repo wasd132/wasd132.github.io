@@ -448,6 +448,24 @@ img {
   background-color: rgba(255,255,255,0.1);
 }
 
+/* Make awards subsection span full width of the about grid */
+.awards-section {
+  grid-column: 1 / -1;
+}
+
+/* Make award cards flow horizontally and share available space */
+.awards-list > .award-item {
+  flex: 1 1 300px;
+  max-width: 48%;
+}
+
+@media screen and (max-width: 600px) {
+  .awards-list > .award-item {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
 .profile-pic-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -638,4 +656,24 @@ a {
   .head-menu-wrap {
     bottom: 15px;
   }
+}
+
+/* Awards horizontal layout overrides */
+.awards-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+.award-item {
+  margin: 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.section-wrapper:nth-child(odd) .award-item {
+  background-color: rgba(255,255,255,0.1);
 }
