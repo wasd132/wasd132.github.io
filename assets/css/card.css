@@ -67,12 +67,16 @@
 /* card article */
 .card__article a {
 	text-decoration: none;
-	color: #444;
+	color: #000;
 	transition: all 0.5s ease;
 }
 
 .card__article a:hover {
-	color: #2980b9;
+	color: #111;
+}
+
+.card .paragraph-text-normal {
+	color: #000;
 }
 
 /* blog cards */
