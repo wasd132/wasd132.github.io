@@ -25,7 +25,7 @@ let render_projects = (slug) => {
             title: '태양광 기반 세종시 모기 퇴치 솔루션',
             demo: false,
             technologies: ['Yolov5', 'python','Raspberry PI'],
-            description: "태양광과 Raspberry PI, Yolov5를 활용한 해충 방제 프로젝트입니다. 특정 위치에 말라리아등의 매개가 되는 모기가 다량 발생 시 이를 탐지하고 대시보드에 출력합니다.",
+            description: "태양광과 Raspberry PI, Yolov5를 활용한 해충 방제 프로젝트입니다. 특정 위치에 말라리아등의 매개가 되는 모기가 다량 발생 시 이를 탐지하여 방제에 도움이 될 수 있도록 합니다.",
             categories: ['ml']
         },
         {
@@ -49,20 +49,11 @@ let render_projects = (slug) => {
         {
             image: 'assets/images/s3scan.png',
             link: 'https://github.com/abhn/S3Scan',
-            title: 'S3Scan',
+            title: '접근통제 정책 집행을 위한 리눅스 커널 모듈 개발',
             demo: false,
-            technologies: ['python'],
-            description: "Automate crawling of a website and find publicly open S3 buckets for takeover.",
+            technologies: ['C','python' ,'Linux', ],
+            description: "BLP모델을 기반으로 한 리눅스 커널 모듈입니다. 사용자의 보안레벨에 따라 파일의 읽기/쓰기 접근을 커널 수준에서 제어합니다.",
             categories: ['security']
-        },
-        {
-            image: 'assets/images/elementary.png',
-            link: 'https://github.com/abhn/Elementary',
-            title: 'Elementary',
-            demo: 'https://elementary-jekyll.github.io/',
-            technologies: ['Jekyll', 'CSS3'],
-            description: "Elementary is a zero Javascript and minimal CSS ultra lightweight Jekyll theme for those of you who love simplicity.",
-            categories: ['ml']
         },
         {
             image: 'assets/images/nextcloud-enc.png',
