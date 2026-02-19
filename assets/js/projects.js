@@ -34,7 +34,7 @@ let render_projects = (slug) => {
             title: 'PE-A(Analyzer)',
             demo: 'https://github.com/ultisy/PE-A',
             technologies: ['Python', 'Qt Designer'],
-            description: "프로젝트 PEA는 'PE(Portable Executable)' 파일 포맷을 분석하고 기능별로 파편화된 도구들을 통합해서 초보자도 손쉽게 사용할 수 있도록 설계했습니다.",
+            description: "PE뷰어 프로젝트 입니다. 기능별로 파편화된 도구들을 통합하여 초보자도 손쉽게 파일포멧을 분석 할 수 있는 프로그램 입니다.",
             categories: ['security']
         },
         {
@@ -43,7 +43,7 @@ let render_projects = (slug) => {
             title: '이커머스 데이터 기반 개인화 추천 시스템 설계 및 구현',
             demo: false,
             technologies: ['python', 'APriori', 'LTR'],
-            description: "Apriori 알고리즘과 LTR(Learning to Rank)을 활용한 상품 추천 시스템을 구축했습니다.",
+            description: "Apriori 알고리즘과 LTR(Learning to Rank)을 활용하여 구매자를 위한 상품 추천 시스템을 구축했습니다.",
             categories: ['ml']
         },
         {

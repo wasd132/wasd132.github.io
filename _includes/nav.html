@@ -6,6 +6,10 @@
         </div>
         <div class="head-name head-title animated" id="head-name">{{ site.title }}</div>
         <div class="head-punchline animated">{{ site.description }}</div>
+        <div class="head-contact animated">
+            <div><i class="fas fa-phone"></i> {{ site.phone }}</div>
+            <div><i class="fas fa-envelope"></i> <a class="head-contact-email" href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+        </div>
         <div class="head-menu-wrap">
             <a class="semi-transparent-button with-border nav-links" href="#about">ABOUT</a>
             <a class="semi-transparent-button with-border nav-links" href="#skills">SKILLS</a>

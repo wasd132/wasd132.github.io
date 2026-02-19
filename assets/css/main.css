@@ -111,6 +111,26 @@ a:hover {
   font-size: 1.25rem;
 }
 
+.head-contact {
+  text-align: center;
+  color: #ccc;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.head-contact i {
+  margin-right: 4px;
+}
+
+.head-contact-email {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.head-contact-email:hover {
+  text-decoration: underline;
+}
+
 .head-buttons {
   position: absolute;
   top: 32px;
@@ -226,7 +246,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000000;
   border-radius: 50%;
   font-size: 1.5rem;
   color: white;
@@ -235,7 +255,7 @@ a:hover {
 
 .skill-item:hover .skill-icon {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .skill-name {
