@@ -52,25 +52,16 @@ let render_projects = (slug) => {
             title: '접근통제 정책 집행을 위한 리눅스 커널 모듈 개발',
             demo: false,
             technologies: ['C','python' ,'Linux', ],
-            description: "BLP모델을 기반으로 한 리눅스 커널 모듈입니다. 사용자의 보안레벨에 따라 파일의 읽기/쓰기 접근을 커널 수준에서 제어합니다.",
-            categories: ['security']
-        },
-        {
-            image: 'assets/images/nextcloud-enc.png',
-            link: 'https://www.nagekar.com/2017/08/private-cloud-part-2.html',
-            title: 'Encrypted Self-Hosted Cloud',
-            demo: false,
-            technologies: ['NextCloud', 'GnuPG'],
-            description: "Self hosted encrypted cloud setup with Nextcloud and GnuPG.",
+            description: "BLP모델을 기반으로 한 리눅스 보안 모듈입니다. 사용자의 보안레벨에 따라 파일의 읽기/쓰기 접근을 커널 수준에서 제어합니다.",
             categories: ['security']
         },
         {
             image: 'assets/images/google-cloud-backup.png',
             link: 'https://www.nagekar.com/2018/05/encrypted-backup-with-duplicity.html',
-            title: 'Encrypted Backups - Google Cloud',
+            title: 'MITRE ATT&CK 기반 지능형 침해사고 분석 및 자동 대응 시스템 구축',
             demo: false,
-            technologies: ['NextCloud', 'Duplicity'],
-            description: "Create automated encrypted incremental backups of data. Sync everything securely to Google Cloud.",
+            technologies: ['Wazuh', 'Falco', 'Shuffle', 'python','Docker'],
+            description: "시스템 콜 기반 행위 탐지와 MITRE TTP 매핑을 통해 위협을 정량화하고, SOAR를 활용한 자동 대응까지 구현한 통합 보안 아키텍처를 구현했습니다.",
             categories: ['security']
         },
     ]
