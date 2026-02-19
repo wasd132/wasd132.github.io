@@ -6,6 +6,12 @@ site_title: '@TOSS_PORTFOLIO'
 markdown: kramdown
 exclude: [vendor/ruby]
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # Personalization
 github_username: wasd132
 blog_url: 

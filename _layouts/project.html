@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% include head.html %}
+<body>
+    <div class="project-detail">
+        <div class="project-detail-header">
+            <a href="/#projects" class="project-back-link"><i class="fas fa-arrow-left"></i> 프로젝트 목록으로</a>
+            <h1 class="project-detail-title">{{ page.title }}</h1>
+            <div class="project-detail-meta">
+                {% for tech in page.technologies %}
+                <span class="project-detail-tech">{{ tech }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% if page.image %}
+        <div class="project-detail-image">
+            <img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+
+        <div class="project-detail-body">
+            <div class="project-detail-summary">
+                <h2>개요</h2>
+                <p>{{ page.summary }}</p>
+            </div>
+
+            <div class="project-detail-content">
+                {{ content }}
+            </div>
+
+            {% if page.github %}
+            <div class="project-detail-links">
+                <a href="{{ page.github }}" class="project-link-button" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="project-detail-footer">
+            <a href="/#projects" class="project-back-link"><i class="fas fa-arrow-left"></i> 프로젝트 목록으로</a>
+        </div>
+    </div>
+
+    {% include scripts.html %}
+</body>
+</html>

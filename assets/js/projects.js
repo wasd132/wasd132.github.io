@@ -12,7 +12,7 @@ let render_projects = (slug) => {
     let projects_obj = [
         {
             image: 'assets/images/mentors.jpg',
-            link: 'https://github.com/abhn/Mporter',
+            link: 'projects/blind-project/',
             title: 'Blind project',
             demo: 'https://github.com/KunsanDADLab/BlindProject/tree/main',
             technologies: ['Yolov5', 'CVAT', 'Python'],
@@ -21,7 +21,7 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/mobile-landscape.jpg',
-            link: 'https://github.com/abhn/Wall-E',
+            link: 'projects/mosquito-solution/',
             title: '태양광 기반 세종시 모기 퇴치 솔루션',
             demo: false,
             technologies: ['Yolov5', 'python','Raspberry PI'],
@@ -30,7 +30,7 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/mpw.jpg',
-            link: 'https://github.com/abhn/mpw',
+            link: 'projects/pe-analyzer/',
             title: 'PE-A(Analyzer)',
             demo: 'https://github.com/ultisy/PE-A',
             technologies: ['Python', 'Qt Designer'],
@@ -39,7 +39,7 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/raspberry-pi-monitor.png',
-            link: 'https://github.com/abhn/RPi-Status-Monitor',
+            link: 'projects/ecommerce-recommendation/',
             title: '이커머스 데이터 기반 개인화 추천 시스템 설계 및 구현',
             demo: false,
             technologies: ['python', 'APriori', 'LTR'],
@@ -48,7 +48,7 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/s3scan.png',
-            link: 'https://github.com/abhn/S3Scan',
+            link: 'projects/blp-kernel-module/',
             title: '접근통제 정책 집행을 위한 리눅스 커널 모듈 개발',
             demo: false,
             technologies: ['C','python' ,'Linux', ],
@@ -57,7 +57,7 @@ let render_projects = (slug) => {
         },
         {
             image: 'assets/images/google-cloud-backup.png',
-            link: 'https://www.nagekar.com/2018/05/encrypted-backup-with-duplicity.html',
+            link: 'projects/mitre-attack-siem/',
             title: 'MITRE ATT&CK 기반 지능형 침해사고 분석 및 자동 대응 시스템 구축',
             demo: false,
             technologies: ['Wazuh', 'Falco', 'Shuffle', 'python','Docker'],
