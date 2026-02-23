@@ -67,7 +67,7 @@ main.py              — 진입점 (의존성 자동 설치 후 메인 윈도우
 
 ### 2. UI/UX 디자인: Qt Designer 기반 화면 설계
 
-<img src="{{ site.baseurl }}/assets/images/ui.png" alt="UI/UX 디자인 설계" width="100%">
+<img src="{{ site.baseurl }}/assets/images/UI.png" alt="UI/UX 디자인 설계" width="100%">
 
 초보 분석가도 쉽게 사용할 수 있는 직관적 인터페이스를 목표로, **Qt Designer**를 활용하여 전체 앱의 UI/UX를 설계했습니다.
 
