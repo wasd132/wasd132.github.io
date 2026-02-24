@@ -1,9 +1,9 @@
 ---
 layout: project
 title: "MITRE ATT&CK 기반 지능형 침해사고 분석 및 자동 대응 시스템 구축"
-summary: "제로데이 역직렬화 공격에 대해 Falco(커널 시스템 콜 감시) + Wazuh(SIEM) + Shuffle(SOAR)를 결합하여, 탐지부터 격리까지 10초 이내 자동 대응을 실현한 차세대 보안 운영 아키텍처를 설계하고 실제 구현했습니다."
+summary: "제로데이 역직렬화 공격에 대해 Falco(커널 시스템 콜 감시) + Wazuh(SIEM) + Shuffle(SOAR)를 결합하여, 탐지부터 격리까지 자동 대응을 실현한 차세대 보안 운영 아키텍처를 설계하고 구현했습니다."
 image: assets/images/google-cloud-backup.png
-technologies: [Wazuh, Falco, Shuffle, OPNsense, MISP, AbuseIPDB, Docker, Ansible, Python]
+technologies: [Wazuh, Falco, Shuffle, OPNsense, MISP, AbuseIPDB, Docker, Python]
 github:
 categories: security
 ---
@@ -70,7 +70,6 @@ Shuffle에서 7단계 판단 프로세스를 거쳐 위험도를 정량화합니
 
 <video width="100%" height="auto" controls>
   <source src="/assets/videos/Interrupt_attack.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 ## 담당 업무
