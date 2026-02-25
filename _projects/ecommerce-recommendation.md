@@ -41,7 +41,7 @@ DACON 이커머스 고객 거래 데이터셋(Customer, Online Sales, Discount, 
 
 ## 담당 업무 (멘토, 멘티 3명 지도)
 
-<img src="{{ site.baseurl }}/assets/images/edu.jpg" alt="멘토링 사진" width="100%">
+<img src="{{ site.baseurl }}/assets/images/edu.jpg" alt="멘토링 사진" style="max-width:601px; width:100%; height:auto;">
 
 ### 1. 멘토링 및 프로젝트 관리
 - 10주간 주 1회 멘토링: Python 기초 → Pandas → 시각화 → ML 기초(Decision Tree) 단계적 교육
