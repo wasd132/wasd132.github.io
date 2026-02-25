@@ -29,7 +29,7 @@ DAC만으로는 내부자 위협을 막을 수 없는 환경(방산기업 등)�
 - `cur_user_level > cur_doc_level` 위반 시: `-EACCES` 반환, fd 생성 자체 차단
 
 ### 차단 결과
-<img src="{{ site.baseurl }}/assets/images/call fail.jpg" alt="로그에서 차단된 것을 확인" width="100%">
+<img src="{{ site.baseurl }}/assets/images/call fail.jpg" alt="로그에서 차단된 것을 확인" style="max-width:601px; width:100%; height:auto;">
 
 ## 보안 위협 시나리오
 
