@@ -1,7 +1,8 @@
 ---
 layout: project
 title: "PE-A (Analyzer) - PE 파일 분석 도구"
-summary: "PE 파일 포맷을 분석하고 디지털 포렌식 분야에서 활용할 수 있는 올인원 도구입니다. 기능별로 파편화된 도구들을 통합하여 초보자도 손쉽게 PE 구조를 분석하고, 패킹 여부 검사, 헥스 편집, PDF 보고서 생성까지 지원합니다."
+summary: >
+  PE 파일 포맷을 분석하고 디지털 포렌식 분야에서 활용할 수 있는 올인원 도구입니다. 기능별로 파편화된 도구들을 통합하여 초보자도 손쉽게 PE 구조를 분석하고, 패킹 여부 검사, 헥스 편집, PDF 보고서 생성까지 지원합니다.
 image: assets/images/mpw.jpg
 technologies: [Python, PyQt5, Qt Designer, pefile, ReportLab]
 github: https://github.com/ultisy/PE-A

@@ -1,7 +1,8 @@
 ---
 layout: project
 title: "접근통제 정책 집행을 위한 리눅스 커널 모듈 개발"
-summary: "Bell-LaPadula(BLP) 모델을 Kprobe 기반으로 구현한 강제 접근통제(MAC) 커널 모듈입니다. 'No Read Up, No Write Down' 정책을 커널 레벨에서 강제하여 방산기업 등 민감한 정보를 다루는 환경에서 내부자 위협을 차단합니다. 가상의 시나리오를 통해 4단계 보안 등급을 검증합니다."
+summary: >
+  Bell-LaPadula(BLP) 모델을 Kprobe 기반으로 구현한 강제 접근통제(MAC) 커널 모듈입니다. 'No Read Up, No Write Down' 정책을 커널 레벨에서 강제하여 방산기업 등 민감한 정보를 다루는 환경에서 내부자 위협을 차단합니다. 가상의 시나리오를 통해 4단계 보안 등급을 검증합니다.
 image: assets/images/s3scan.png
 technologies: [C, Linux Kernel, Kprobe, Hashtable, BLP Model]
 github:

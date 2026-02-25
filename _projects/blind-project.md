@@ -1,8 +1,9 @@
 ---
 layout: project
 title: "Blind Project - 시각장애인 보행 보조장치"
-summary: "시각장애인을 위한 보행 보조장치입니다. YOLOv5 기반 실시간 객체 인식과 Android 스마트폰 앱, 소켓 통신을 활용하여 보행 경로 상의 위험 요소를 탐지하고 음성으로 경고를 제공합니다."
-image: assets/images/mentors.jpg
+summary: >
+  시각장애인을 위한 보행 보조장치입니다. YOLOv5 기반 실시간 객체 인식과 Android 스마트폰 앱, 소켓 통신을 활용하여 보행 경로 상의 위험 요소를 탐지하고 음성으로 경고를 제공합니다.
+image: "{{ site.baseurl }}/assets/images/mentors.jpg"
 technologies: [YOLOv5, CVAT, Python, Android Studio, Raspberry Pi, OpenCV, Socket, PyGame]
 github: https://github.com/KunsanDADLab/BlindProject
 categories: ml
@@ -79,7 +80,7 @@ categories: ml
   2. 단순 작업 후 병합이 아닌 **'1차 라벨링 → 교차 검수(Peer Review) → 수정'의 3단계 프로세스**를 도입했습니다. 다른 팀원이 Task를 열어 오류(예: 객체 절반만 박스 처리, 고무 볼라드 오분류 등)를 직접 수정하거나 코멘트를 남기도록 강제했습니다.
 - **Result (결과):** 교차 검수 도입 직후 라벨링 오류율이 급감했으며, 일관된 기준의 고품질 어노테이션 데이터를 바탕으로 커스텀 모델의 실제 환경 탐지 정확도를 목표치 이상으로 끌어올렸습니다.
 
-### 3. 해커톤 병목 현상(Bottleneck) 해소를 위한 애자일(Agile) 일정 관리
+### 3. 해커톤 병목 현상 해소를 위한 일정 관리
 - **Situation (상황):** 해커톤 마감(D-7) 시점에 라벨링 완료율이 60%에 머물러, 모델 학습 및 통합 테스트 일정이 연쇄적으로 지연될 심각한 리스크가 발생했습니다.
 - **Action (행동):** CVAT 대시보드를 통해 팀원별 Task 진행률(프레임 처리량)을 실시간 모니터링하여, 진척이 더딘 작업량을 타 팀원에게 즉각 재분배했습니다. 또한, 전체 라벨링 완료를 기다리지 않고 **모델 성능 체감에 가장 큰 영향을 미치는 핵심 클래스(스쿠터, 볼라드)가 포함된 Task를 최우선 순위로 끌어올려 선행 처리**하도록 지시했습니다.
 - **Result (결과):** 라벨링 병목 현상을 타개하고 마감 전 핵심 클래스에 대한 학습(detect_v1 → server_09.17)을 여러 차례 반복할 수 있는 시간을 확보하여, 성공적으로 최종 통합 데모를 완성했습니다.

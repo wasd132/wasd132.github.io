@@ -1,7 +1,8 @@
 ---
 layout: project
 title: "이커머스 데이터 기반 개인화 추천 시스템"
-summary: "DACON 이커머스 고객 거래 데이터를 활용하여, Apriori 연관 규칙 마이닝과 LGBMRanker 기반 LTR(Learning to Rank) 모델을 결합한 하이브리드 상품 추천 시스템입니다. 단순한 상품 유사도 기반 추천이 아닌, 고객·상품 특성을 피처로 학습하여 개인화된 추천 순위를 제공합니다."
+summary: >
+  DACON 이커머스 고객 거래 데이터를 활용하여, Apriori 연관 규칙 마이닝과 LGBMRanker 기반 LTR(Learning to Rank) 모델을 결합한 하이브리드 상품 추천 시스템입니다. 단순한 상품 유사도 기반 추천이 아닌, 고객·상품 특성을 피처로 학습하여 개인화된 추천 순위를 제공합니다.
 image: assets/images/raspberry-pi-monitor.png
 technologies: [Python, Apriori, LightGBM, LGBMRanker, Pandas, Kaggle]
 github:
@@ -65,7 +66,7 @@ categories: ml
 
 ### 3. 추천 알고리즘 튜닝 및 모델 평가 
 LightGBM을 활용한 LTR 파이프라인 코어 로직을 직접 구현하고 튜닝했습니다.
-- 랭킹 문제에 적합한 평가 지표인 **NDCG@k**를 도입하여 고객 그룹별 추천 품질을 정량적으로 측정(평균 0.867)했습니다.
+- 랭킹 문제에 적합한 평가 지표인 NDCG@k를 도입하여 고객 그룹별 추천 품질을 정량적으로 측정(평균 0.867)했습니다.
 - Feature Importance를 시각화하여 '고객의 지역'과 '과거 구매 카테고리'가 추천에 미치는 영향도를 분석하고 이를 최종 발표 자료의 핵심 근거로 활용했습니다.
 
 <img src="{{ site.baseurl }}/assets/images/edu.jpg" alt="멘토링 활동" style="max-width:601px; width:100%; height:auto;">
