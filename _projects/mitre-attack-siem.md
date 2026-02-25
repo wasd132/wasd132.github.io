@@ -48,6 +48,8 @@ Shuffle 워크플로우에서 Wazuh Level 12+ 이벤트를 수신하면, IP 평�
 | 6 | eval() 백도어 삽입 | T1505.003 | DETECT |
 | 7 | docker.sock → 컨테이너 탈출 | T1611 + T1070 | **CRITICAL** |
 
+## 공격 시현 및 탐지 시현
+
 <video width="100%" height="auto" controls>
   <source src="/assets/videos/Interrupt_attack.mp4" type="video/mp4">
 </video>

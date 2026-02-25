@@ -28,11 +28,12 @@ DAC만으로는 내부자 위협을 막을 수 없는 환경(방산기업 등)�
 - `do_filp_open` 후킹 → `open_flag & (O_WRONLY | O_RDWR)` 검사
 - `cur_user_level > cur_doc_level` 위반 시: `-EACCES` 반환, fd 생성 자체 차단
 
+### 차단 결과
+<img src="{{ site.baseurl }}/assets/images/call fail.jpg" alt="로그에서 차단된 것을 확인" width="100%">
+
 ## 보안 위협 시나리오
 
-방산기업 "파란 독수리"의 엔지니어 A씨가 적대 기업의 유혹에 넘어가 기밀 문서(Level 2: Secret)를 이동식 저장소(Level 0~1)로 복사하려는 시나리오:
-
-<img src="{{ site.baseurl }}/assets/images/call fail.jpg" alt="로그에서 차단된 것을 확인" width="100%">
+보안을 요구하는 기업에 근무하는 내부자가 적대 기업에게 기밀 문서(Level 2: Secret)를 이동식 저장소(Level 0~1)로 복사하려는 시나리오로 구성
 
 - A씨(Level 2)가 Level 0 저장소에 쓰기 시도 → **No Write Down** 위반 → `do_filp_open`에서 차단
 - 차단 즉시 `/var/log/kern.log`에 기록 → 보안 관리자에게 보고
