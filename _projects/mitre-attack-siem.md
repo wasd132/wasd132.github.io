@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "MITRE ATT&CK 기반 침해사고 자동 탐지·대응 시스템"
-summary: "Falco + Wazuh + Shuffle SOAR를 결합하여, 제로데이 역직렬화 공격을 커널 시스템 콜 레벨에서 탐지하고 10초 이내 자동 격리까지 수행하는 보안 운영 시스템을 구축했습니다."
+summary: "Falco + Wazuh + Shuffle SOAR를 결합하여, 제로데이 역직렬화 공격을 커널 시스템 콜 레벨에서 탐지하고 자동 격리까지 수행하는 보안 운영 시스템을 구축하고 공격 시나리오에 따라 대응을 구현했습니다."
 image: assets/images/google-cloud-backup.png
 technologies: [Wazuh, Falco, Shuffle, OPNsense, MISP, AbuseIPDB, Docker, Python]
 github:
@@ -79,7 +79,7 @@ Shuffle 워크플로우에서 Wazuh Level 12+ 이벤트를 수신하면, IP 평�
 ### 5. 네트워크 페일오버 구현
 - WAF에 구성된 Nginx를 활용하여 Active–Standby Failover를 구현, Primary 장애 시 Standby로 자동 전환되도록 구성
 
-<details>
+<details markdown="1">
 <summary>nginx.conf 설정 보기</summary>
 
 ```nginx
