@@ -1,17 +1,9 @@
-# Portfolio
+# 개인용 포트폴리오입니다
 
-A simple and modern portfolio template that is lightweight, mobile responsive and looks modern. 
+프로젝트는 누르면 상세 설명이 올라와 있습니다.
 
-- [Demo](#demo)
-- [Screenshots](#screenshots)
-- [Features](#features)
-- [Installation](#installation)
-
-### Demo
+### Demo(원본)
 [abhn.github.io/portfolio](https://abhn.github.io/portfolio)
-
-### Screenshots
-![homepage](tmp/screenshot.jpg?raw=true "Homepage")
 
 ### Features
 - Single page portfolio made with vanilla CSS and jQuery
