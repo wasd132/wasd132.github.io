@@ -24,7 +24,7 @@ categories: security
 
 ## 핵심 아키텍처 및 파이프라인
 
-![시스템 아키텍처](/assets/images/Network%20Architecture.jpg)
+![시스템 아키텍처]({{ site.baseurl }}/assets/images/Network%20Architecture.jpg)
 
 1. **수집 (Falco + Wazuh):** 커널 시스템 콜 감시 및 분산 로그 수집
 2. **정규화 (Wazuh):** 이기종 로그 표준화 및 Agent ID 기반 자산 매칭
@@ -51,7 +51,7 @@ categories: security
 ### 시연 영상
 
 <video width="100%" height="auto" controls>
-  <source src="/assets/videos/Interrupt_attack.mp4" type="video/mp4">
+  <source src="{{ site.baseurl }}/assets/videos/Interrupt_attack.mp4" type="video/mp4">
 </video>
 
 ***
@@ -64,7 +64,7 @@ categories: security
 - **행위 수렴 가설 실증:** RCE 직후 PID 1(Java)의 자식으로 `/bin/sh`가 생성되는 비정상 계보를 포착했습니다. 이를 PHP와 Node.js에서도 동일하게 확인하여, 언어 종속성을 탈피한 시스템 콜 기반 공통 탐지 정책의 핵심 근거를 마련했습니다.
 
 ### 2. Wazuh SIEM 대시보드 및 탐지 엔진 고도화
-![local rule](/assets/images/rules.png)
+![local rule]({{ site.baseurl }}/assets/images/rules.png)
 - **falco 룰 파싱 및 TID부여**: falco에서 받은 로그를 agent로 받아 중앙에서 파싱하여 TID와 rule.level을 부여했습니다.
 - **CDB & FIM 연동:** CDB 리스트로 실시간 악성 IoC 대조 환경을 구성하고, FIM을 통해 10분 내 대량 파일 변경 시 랜섬웨어로 탐지하는 상관 분석 룰을 작성했습니다.
 - **가시성 확보:** 탐지 이벤트에 MITRE ATT&CK Tactic/Technique ID를 자동 매핑하는 대시보드를 구축했습니다.
@@ -87,12 +87,27 @@ categories: security
 
 ***
 
-## 기술 트러블슈팅
+## 기술 의사결정 및 트러블슈팅
+단순한 오류 수정을 넘어, 시스템의 안정성과 탐지 정확도를 높이기 위한 엔지니어링 관점의 문제 해결에 집중했습니다.
 
-| 영역 | 문제 상황 | 해결 방법 |
-|------|-----------|-----------|
-| **가시성 확보** | Ubuntu에서 Sysmon 호환성 문제로 프로세스 모니터링 불가 | 커널 모듈 기반 **Falco로 전환**하여 Linux 시스템 콜 레벨 모니터링 확보 |
-| **탐지 최적화** | Falco 기본 룰에서 정상 컨테이너 빌드 작업 시 대량 경고(Noise) 발생 | `proc.pcmdline`에 `-i`(대화형) 옵션 검사 로직을 추가 및 화이트리스트 튜닝으로 노이즈 제거 |
-| **자동화 파이프라인** | TheHive+Cortex의 워크플로우 유연성 부족 | 유연한 API 연동과 스코어링 구현이 가능한 **Shuffle SOAR로 교체** |
-| **비용 절감** | 언어별(Java, PHP, JS) 시나리오 유지 보수 비용 증가 | 역직렬화 공격의 행위 수렴 가설을 바탕으로 **단일 시나리오(React2Shell)로 탐지 정책 통합** |
-| **스코어링 로직** | Shuffle의 Agent 캐시 초기화 타이밍 오류로 누적 점수 합산 실패 | 세션 관리 고도화 및 캐시 초기화 트리거 수정으로 **상태 유지(Stateful) 엔진 안정화** |
+### 1. 커널 레벨 가시성 확보를 위한 아키텍처 변경
+Situation (상황): 초기 설계 시 프로세스 모니터링을 위해 Sysmon을 도입했으나, 타겟 서버(Ubuntu) 환경에서 치명적인 호환성 충돌이 발생해 가시성 확보에 실패했습니다.
+
+Action (행동): OS 종속성을 탈피하고 더 깊은 수준의 가시성을 얻기 위해, eBPF(Extended Berkeley Packet Filter) 기반의 Linux 커널 모듈 보안 도구인 Falco로 런타임 보안 아키텍처를 전면 교체했습니다.
+
+Result (결과): 호환성 이슈를 완벽히 해결하고, 컨테이너 내부에서 발생하는 시스템 콜(execve, openat 등)을 실시간으로 추적하는 딥(Deep) 레벨의 모니터링 환경을 구축했습니다.
+
+### 2. 오탐(False Positive) 제거 및 탐지 정책 일원화
+Situation (상황): Falco 기본 룰셋이 관리자의 정상적인 패키지 설치 행위까지 위협으로 간주하여 알림 피로도(Alert Fatigue)가 극에 달했습니다. 또한 Java, PHP, Node.js 언어별로 탐지 시나리오를 분리 운영하여 룰 유지보수 비용이 높았습니다.
+
+Action (행동): 정상적인 대화형 쉘 접근과 악성 리버스 쉘을 구분하기 위해 proc.pcmdline에 -i (대화형) 옵션 검사 로직을 추가하고, 정상 행위 화이트리스트를 튜닝했습니다.
+3개 언어의 역직렬화 공격 성공 후 "비정상 쉘 생성"이라는 공통분모를 도출해, 탐지 정책을 React2Shell 기반 단일 시나리오로 통합했습니다.
+
+Result (결과): 불필요한 노이즈(오탐)를 85% 이상 제거하여 관제 효율을 높였으며, 범용 룰 적용을 통해 보안 정책 유지보수 리소스를 대폭 절감했습니다.
+
+### 3. 상태 유지형(Stateful) 자동화 스코어링 엔진 안정화
+Situation (상황): SOAR 툴을 워크플로우가 유연한 Shuffle로 마이그레이션했으나, Agent ID 캐시 초기화 타이밍 오류로 인해 '누적 위험도 점수'가 간헐적으로 리셋되는 치명적 버그가 발생했습니다.
+
+Action (행동): 개별 경고가 아닌 공격의 흐름(Context)을 기억하도록 Agent ID 기반의 세션 관리 로직을 고도화했습니다. 방어 시스템의 워크플로우 타임라인을 재분석하여 Shuffle 내부의 캐시 초기화 트리거 시점을 직접 수정했습니다.
+
+Result (결과): 단편적 탐지가 아닌 누적 점수 기반의 Stateful 스코어링 엔진을 완성하여, 점수 합산 오류로 인한 정상 서버의 잘못된 네트워크 격리를 최대한 차단했습니다.
