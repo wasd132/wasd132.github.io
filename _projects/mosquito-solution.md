@@ -22,6 +22,7 @@ categories: ml
 | **실시간 모니터링** | 카메라·센서 데이터 수집, 대시보드 시각화, 임계값 초과 알림 |
 | **지자체 협력** | 세종시 질병관리청 등 3개 이상 기관 협력, 현장 자문·테스트 |
 
+
 ## 시스템 구조
 
 ```
@@ -30,23 +31,21 @@ categories: ml
     └─ 데이터 → 대시보드 출력 
 ```
 
+<img src="{{ site.baseurl }}/assets/images/mosquito.png" alt="AI정확도" style="max-width:600px; width:100%; height:auto; margin: 2rem 0;">
+<img src="{{ site.baseurl }}/assets/images/proto.jpg" alt="모기 퇴치기 시제품" style="max-width:400px; width:100%; height:auto; margin: 2rem 0;">
+<img src="{{ site.baseurl }}/assets/images/dashboard.jpg" alt="실시간 모니터링 대시보드" style="max-width:600px; width:100%; height:auto; margin: 2rem 0;">
+
 
 ## 담당 업무 (개발 팀장/AI,S/W 담당)
 
 - 지자체 협력(질병관리청) 및 개발 일정 총괄
 
-<img src="{{ site.baseurl }}/assets/images/mosquito.png" alt="AI정확도" style="max-width:600px; width:100%; height:auto; margin: 2rem 0;">
-<img src="{{ site.baseurl }}/assets/images/proto.jpg" alt="모기 퇴치기 시제품" style="max-width:400px; width:100%; height:auto; margin: 2rem 0;">
-<img src="{{ site.baseurl }}/assets/images/dashboard.jpg" alt="실시간 모니터링 대시보드" style="max-width:600px; width:100%; height:auto; margin: 2rem 0;">
-- YOLOv5 기반 모기 인식 S/W 개발, 학습데이터 수집·라벨링·정확도 개선
-
-- 퇴치기/감지기 시제품 제작(라즈베리파이 ai모듈 소프트웨어 이식)
-
-- 실시간 모니터링 대시보드 설계 및 임계값 알림 시스템 구축
-
-- 유지보수를 위한 기술문서 작성
-
-- 여러 학과로 구성된 팀 협업 및 현장 테스트 진행
+-- 지자체 협력(질병관리청) 및 개발 일정 총괄
+-- YOLOv5 기반 모기 인식 S/W 개발, 학습데이터 수집·라벨링·정확도 개선
+-- 퇴치기/감지기 시제품 제작(라즈베리파이 ai모듈 소프트웨어 이식)
+-- 실시간 모니터링 대시보드 설계 및 임계값 알림 시스템 구축
+-- 유지보수를 위한 기술문서 작성
+-- 여러 학과로 구성된 팀 협업 및 현장 테스트 진행
 
 ## 기술 스택
 
