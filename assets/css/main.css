@@ -111,6 +111,18 @@ a:hover {
   font-size: 1.25rem;
 }
 
+/* Short bio (sub-punch) spacing and sizing */
+.head-subpunch {
+  display: block;
+  margin-top: 10px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
 .head-contact {
   text-align: center;
   color: #ccc;
