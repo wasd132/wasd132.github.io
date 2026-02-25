@@ -23,24 +23,12 @@ function blog_posts() {
     // keeping it static, can be fetched from a blog dynamically as well
     let posts = [
         {
-            url: 'https://www.nagekar.com/2017/02/trip-to-bramhatal-uttarakhand.html',
-            title: 'Trek To Bramhatal (Uttarakhand)',
+            url: 'https://velog.io/@wasd1324/posts',
+            title: '주간 개발 일지',
         },
         {
-            url: 'https://www.nagekar.com/2017/08/privacy.html',
-            title: 'Privacy - How I Converted',
-        },
-        {
-            url: 'https://www.nagekar.com/2018/01/jagriti-yatra.html',
-            title: 'Jagriti Yatra 2017',
-        },
-        {
-            url: 'https://www.nagekar.com/2017/08/private-cloud-part-2.html',
-            title: 'Private Cloud Part 2 | Encrypted Storage With NextCloud',
-        },
-        {
-            url: 'https://www.nagekar.com/2018/07/eli5-how-https-works.html',
-            title: 'ELI5 - How HTTPS Works',
+            url: 'https://velog.io/@wasd132/n8n-%EC%9D%84-%ED%99%9C%EC%9A%A9%ED%95%9C-SOAR%EA%B5%AC%EC%B6%95',
+            title: 'n8n을 활용한 SOAR 구축',
         },
     ];
 
@@ -76,11 +64,11 @@ function blog_posts() {
 
     // for the more posts link
     let post_template = `
-    <div class="blog-post more-blogs" onclick="blog_link_click('https://www.nagekar.com');">
+    <div class="blog-post more-blogs" onclick="blog_link_click('https://velog.io/@wasd132/posts');">
 
         <div class="blog-link">
 
-            <h3><a href="https://www.nagekar.com">Visit the blog for more posts</a></h3>            
+            <h3><a href="https://velog.io/@wasd132/posts">Visit the blog for more posts</a></h3>            
 
         </div>
 
