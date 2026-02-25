@@ -648,7 +648,14 @@ a {
 }
 
 .head-inner-wrap {
-  
+  text-align: center;
+}
+
+/* Ensure header name/title centers on desktop */
+.head-title {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .bottom-link {
