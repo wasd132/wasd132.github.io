@@ -3,7 +3,7 @@ layout: project
 title: "Blind Project - 시각장애인 보행 보조장치"
 summary: >
   시각장애인을 위한 보행 보조장치입니다. YOLOv5 기반 실시간 객체 인식과 Android 스마트폰 앱, 소켓 통신을 활용하여 보행 경로 상의 위험 요소를 탐지하고 음성으로 경고를 제공합니다.
-image: /assets/images/mentors.jpg
+image: assets/images/mentors.jpg
 technologies: [YOLOv5, CVAT, Python, Android Studio, Raspberry Pi, OpenCV, Socket, PyGame]
 github: https://github.com/KunsanDADLab/BlindProject
 categories: ml
