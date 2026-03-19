@@ -102,9 +102,9 @@ CDB 리스트를 활용해 실시간 IoC(IP/Hash) 대조 환경을 구성하고,
 
 ### 5.Active-Standby 기반 Nginx Failover 아키텍처 구현
 
-- 네트워크 격리가 필요한 상황이 발생하더라도 서비스는 유지되어야 합니다. 이를 위해 Nginx upstream을 활용해 Active-Standby 구조를 구성하고, Primary 서버 장애 시 Backup 서버로 자동 전환되는 Failover를 구현했습니다. Active 서버 요청 중 max_fails=1, fail_timeout=3s 기준으로 장애를 판단하고, timeout 및 502/503/504 발생 시 backup 서버로 즉시 전환되도록 설정했습니다.또한 proxy_connect_timeout, proxy_next_upstream 설정으로 빠른 장애 감지와 재시도를 적용하고, WAF(ModSecurity)와 결합해 보안과 가용성을 동시에 확보하여 안정성을 강화 했습니다.
+- 네트워크 격리가 필요한 상황이 발생하더라도 서비스는 유지되어야 합니다. 이를 위해 Nginx upstream을 활용해 Active-Standby 구조를 구성하고, Primary 서버 장애 시 Backup 서버로 자동 전환되는 Failover를 구현했습니다. Active 서버 요청 중 max_fails=1, fail_timeout=3s 기준으로 장애를 판단하고, timeout 및 502/503/504 발생 시 backup 서버로 즉시 전환되도록 설정했습니다. 또한 proxy_connect_timeout, proxy_next_upstream 설정으로 빠른 장애 감지와 재시도를 적용하고, WAF(ModSecurity)와 결합해 보안과 가용성을 동시에 확보하여 안정성을 강화 했습니다.
 
-### 5. 문서화 및 프로젝트 총괄 리드
+### 6. 문서화 및 프로젝트 총괄 리드
 
 - 아키텍처 설계 주도: Falco → Wazuh → Shuffle → Active Response로 이어지는 자동 대응 파이프라인 구조를 설계하고, 각 구성 요소 간 데이터 흐름과 역할을 정의했습니다.
 
