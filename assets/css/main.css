@@ -554,30 +554,6 @@ a:hover {
   color: #fff;
 }
 
-.post-date {
-  float: right;
-}
-
-.blog-item {
-  padding: 10px;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-.blog-title {
-  font-size: 17.6px;
-  font-size: 1.1rem;
-  color: #90caf9;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-.more-blogs {
-  font-size: 16px;
-  font-size: 1rem;
-  margin: 15px 0 20px;
-}
-
 .slightly-smaller-text {
   font-size: 14.4px;
   font-size: 0.9rem;
